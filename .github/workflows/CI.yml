@@ -1,0 +1,17 @@
+---
+name: runner debug
+
+on:
+  - push
+  - commit
+  - pull-request
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: get all installed packages
+        run: dpkg -l
+...
