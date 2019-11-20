@@ -13,4 +13,13 @@ jobs:
     steps:
       - name: get all installed packages
         run: dpkg -l
+
+      - name: get info about ansible
+        run: ansible --version
+
+      - name: install requirements
+        run: true
+
+      - name: get molecule version
+        run: molecule
 ...
