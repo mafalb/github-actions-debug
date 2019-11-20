@@ -34,6 +34,9 @@ jobs:
       - name: get molecule version
         run: pip show molecule
 
+      - name: get environment
+        run: env
+
       - name: execute molecule
         run: molecule
 ...
