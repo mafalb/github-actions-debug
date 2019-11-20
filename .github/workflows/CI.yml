@@ -27,7 +27,7 @@ jobs:
 
       - name: get environment
         run: env
-           
+
       - name: get molecule version
-        run: .local/bin/molecule
+        run: pip show molecule
 ...
