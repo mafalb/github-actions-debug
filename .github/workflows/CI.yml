@@ -28,6 +28,12 @@ jobs:
       - name: get environment
         run: env
 
+      - name: set path
+        run: export PATH=/home/runner/.local/bin:$PATH
+
       - name: get molecule version
         run: pip show molecule
+
+      - name: execute molecule
+        run: molecule
 ...
