@@ -3,7 +3,6 @@ name: runner debug
 
 on:
   - push
-  - commit
   - pull-request
 
 jobs:
