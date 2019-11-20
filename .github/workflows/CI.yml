@@ -17,8 +17,11 @@ jobs:
       - name: get info about ansible
         run: ansible --version
 
+      - name: checkout our github project
+        uses: actions/checkout@v1
+      
       - name: install requirements
-        run: true
+        run: pip2 install -r requirements.txt
 
       - name: get molecule version
         run: molecule
