@@ -20,6 +20,9 @@ jobs:
       - name: checkout our github project
         uses: actions/checkout@v1
       
+      - name: ls
+        run: ls -l /usr/bin
+        
       - name: install requirements
         run: |
           sudo apt-get install python-wheel
