@@ -14,6 +14,9 @@ jobs:
 
     steps:
       
+      - name: get kernel config
+        run: cat /boot/config-$(uname -r)
+
       - name: get mounted filesystems
         run: df -h
 
