@@ -49,6 +49,4 @@ jobs:
       - name: get environment
         run: env
 
-      - name: execute molecule
-        run: molecule
 ...
