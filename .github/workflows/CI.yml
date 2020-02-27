@@ -1,4 +1,6 @@
+# vim: set ft=yaml ts=2 expandtab:
 ---
+
 name: runner debug
 
 on: 
@@ -11,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      
+      - name: get mounted filesystems
+        run: df -h
+
       - name: get all installed packages
         run: dpkg -l
 
