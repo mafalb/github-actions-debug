@@ -14,6 +14,9 @@ jobs:
 
     steps:
       
+      - name: /etc/docker
+        run: ls -l /etc/docker
+
       - name: get kernel config
         run: cat /boot/config-$(uname -r)
 
