@@ -56,7 +56,7 @@ jobs:
         run: env
       
       - name: get pip config
-        run: cat /etc/pip.conf
+        run: locate pip.conf
         
 
 ...
