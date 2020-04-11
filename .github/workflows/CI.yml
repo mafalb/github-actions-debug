@@ -59,8 +59,8 @@ jobs:
         run: |
           ip addr li
           ip ro li
-          iptables -L -v
-          iptables -L -v -t nat
+          sudo iptables -L -v
+          sudo iptables -L -v -t nat
           docker network ls
           docker network inspect bridge
 ...
