@@ -59,8 +59,8 @@ jobs:
         run: |
           ip addr li
           ip ro li
-          brctl show
           iptables -L -v
           iptables -L -v -t nat
-
+          docker network ls
+          docker network inspect bridge
 ...
