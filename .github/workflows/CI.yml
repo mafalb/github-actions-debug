@@ -55,8 +55,12 @@ jobs:
       - name: get environment
         run: env
       
-      - name: get pip config
-        run: find ~ /etc -name pip.conf
-        
+      - name: Network setup
+        run: |
+          ip addr li
+          ip ro li
+          brctl show
+          iptables -L -v
+          iptables -L -v -t nat
 
 ...
