@@ -41,11 +41,19 @@ jobs:
       - name: get info about galaxy
         run: ansible-galaxy --version
 
+      - name: ls
+        run: |
+          pwd
+          ls -l
+          
       - name: checkout our github project
         uses: actions/checkout@v1
       
       - name: ls
-        run: ls -l /usr/bin
+        run: |
+          pwd
+          ls -l
+          ls -l /usr/bin
         
       - name: install requirements
         run: |
