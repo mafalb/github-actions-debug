@@ -55,10 +55,9 @@ jobs:
           ls -l
           ls -l /usr/bin
         
-      - name: install requirements
+      - name: install venv requirements
         run: |
-          sudo apt-get install python-wheel
-          pip2 install -r requirements.txt
+          sudo apt-get install python3.8-venv
 
       - name: get environment
         run: env
