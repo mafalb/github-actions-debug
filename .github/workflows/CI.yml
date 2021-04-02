@@ -42,6 +42,9 @@ jobs:
       - name: get info about galaxy
         run: ansible-galaxy --version
 
+      - name: get ansible facts
+        run: ansible localhost -m setup
+        
       - name: ls
         run: |
           pwd
