@@ -15,6 +15,9 @@ jobs:
 
     steps:
       
+      - name: list local docker images
+        run: docker images
+        
       - name: check if podman is available
         run: podman --version
         
