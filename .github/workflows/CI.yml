@@ -15,6 +15,23 @@ jobs:
 
     steps:
       
+      - name: docker version
+        run: |
+          docker --version
+          dockerd --version
+
+      - name: list files in moby
+        run: |
+          dpkg -L moby-cli
+
+      - name: list files in moby
+        run: |
+          dpkg -L moby-engine
+
+      - name: list files in moby
+        run: |
+          dpkg -L moby-containerd
+
       - name: list local docker images
         run: docker images
         
