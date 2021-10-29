@@ -15,6 +15,11 @@ jobs:
 
     steps:
       
+      - name: checkout collection ansible
+        uses: actions/checkout@v2
+        with:
+          path: src
+
       - name: setup python
         uses: actions/setup-python@v2
         with:
@@ -30,7 +35,7 @@ jobs:
       - name: virtualenv
         run: |
           pip install virtualenv
-          ansible-playbook venv.yml
+          ansible-playbook src/venv.yml
           . /tmp/test/bin/activate
           ansible --version
 
