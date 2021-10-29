@@ -5,4 +5,4 @@
     - pip:
         name: ansible
         virtualenv: /tmp/test
-        virtualenv_command: "virtualenv -p python2"
+        virtualenv_command: virtualenv
