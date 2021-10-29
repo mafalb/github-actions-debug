@@ -29,8 +29,6 @@ jobs:
           virtualenv --version
           cat /usr/bin/virtualenv
          
-      - name: virtualenv
-        
       - name: docker version
         run: |
           docker --version
