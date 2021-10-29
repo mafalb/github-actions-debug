@@ -26,9 +26,14 @@ jobs:
           which python
           ls -l /opt/hostedtoolcache/Python/
           ls /opt/hostedtoolcache/Python/2.7.18/x64/bin
-          virtualenv --version
-          cat /usr/bin/virtualenv
          
+      - name: virtualenv
+        run: |
+          pip install virtualenv
+          virtualenv /tmp/test
+          . /tmp/test/bin/activate
+          python --version
+
       - name: docker version
         run: |
           docker --version
