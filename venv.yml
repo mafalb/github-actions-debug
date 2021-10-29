@@ -5,4 +5,4 @@
     - pip:
         name: ansible
         virtualenv: /tmp/test
-        virtualenv_command: virtualenv
+        virtualenv_command: "{{ arg_virtualenv_command }}"

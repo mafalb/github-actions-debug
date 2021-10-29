@@ -35,7 +35,7 @@ jobs:
       - name: virtualenv
         run: |
           pip install virtualenv
-          ansible-playbook src/venv.yml
+          ansible-playbook src/venv.yml -e arg_virtualenv_command='virtualenv -p python2'
           . /tmp/test/bin/activate
           ansible --version
 
