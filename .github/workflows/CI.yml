@@ -30,9 +30,9 @@ jobs:
       - name: virtualenv
         run: |
           pip install virtualenv
-          virtualenv /tmp/test
+          ansible-playbook venv.yml
           . /tmp/test/bin/activate
-          python --version
+          ansible --version
 
       - name: docker version
         run: |

@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+    - pip:
+        name: virtualenv
+    - pip:
+        name: ansible
+        virtualenv: /tmp/test
+        virtualenv_command: "virtualenv -p python2"
