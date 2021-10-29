@@ -15,6 +15,17 @@ jobs:
 
     steps:
       
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: python
+        run: |
+          echo $PATH
+          which python
+          which python3.8
+         
       - name: docker version
         run: |
           docker --version
@@ -89,9 +100,6 @@ jobs:
 
       - name: set path
         run: export PATH=/home/runner/.local/bin:$PATH
-
-      - name: get molecule version
-        run: pip show molecule
 
       - name: get environment
         run: env
