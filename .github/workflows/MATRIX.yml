@@ -39,6 +39,7 @@ jobs:
  
           - os: fedora35
             ansible_version: '2.9'
+
           - os: fedora35
             python_version: '3.6'
           - os: fedora35
@@ -60,6 +61,13 @@ jobs:
             python_version: '3.8'
           - os: c9s
             python_version: '3.9'
+
+          - os: ubuntu2110:
+            ansible_version: '2.9'
+          - os: ubuntu2110
+            python_version: '3.6'
+          - os: ubuntu2110
+            python_version: '3.8'
 
         include:
  
