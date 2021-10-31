@@ -3,6 +3,6 @@
     - pip:
         name: virtualenv
     - pip:
-        name: ansible
+        name: ansible-core
         virtualenv: /tmp/test
         virtualenv_command: "{{ arg_virtualenv_command }}"
