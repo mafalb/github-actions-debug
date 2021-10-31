@@ -62,7 +62,7 @@ jobs:
           - os: c9s
             python_version: '3.9'
 
-          - os: ubuntu2110:
+          - os: ubuntu2110
             ansible_version: '2.9'
           - os: ubuntu2110
             python_version: '3.6'
