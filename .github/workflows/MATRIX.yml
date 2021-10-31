@@ -56,11 +56,10 @@ jobs:
           - os: c9s
             ansible_version: '2.9'
           - os: c9s
-            python_version: '3.6'
-          - os: c9s
-            python_version: '3.8'
-          - os: c9s
-            python_version: '3.9'
+            python_version:
+              - '3.6'
+              - '3.8'
+              - '3.9'
 
           - os: ubuntu2110
             ansible_version: '2.9'
