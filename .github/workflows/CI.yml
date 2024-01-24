@@ -5,24 +5,25 @@ name: runner debug
 
 on: 
 
-  - push
-  - pull_request  
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
 
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
       
       - name: checkout collection ansible
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: src
-
+          
       - name: setup python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '2.7'
 
