@@ -32,11 +32,6 @@ jobs:
            whoami
            echo github_workflow $GITHUB_WORKSPACE
            tree $HOME/work
-           
-      - name: setup python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '2.7'
 
       - name: python
         run: |
@@ -44,14 +39,7 @@ jobs:
           which python
           ls -l /opt/hostedtoolcache/Python/
           ls /opt/hostedtoolcache/Python/2.7.18/x64/bin
-         
-      - name: virtualenv
-        run: |
-          pip install virtualenv
-          ansible-playbook src/venv.yml -e "arg_virtualenv_command='virtualenv -p python2'"
-          . /tmp/test/bin/activate
-          ansible --version
-
+        
       - name: docker version
         run: |
           docker --version
@@ -106,20 +94,11 @@ jobs:
         run: |
           pwd
           ls -l
-          
-      - name: checkout our github project
-        uses: actions/checkout@v1
-      
-      - name: ls
-        run: |
-          pwd
-          ls -l
-          ls -l /usr/bin
         
       - name: install venv requirements
         run: |
           sudo apt-get update
-          sudo apt-get install python3.8-venv
+          sudo apt-get install python3-venv
 
       - name: get environment
         run: env
