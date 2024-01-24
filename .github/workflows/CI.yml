@@ -37,6 +37,7 @@ jobs:
            pwd
            echo $HOME
            whoami
+           tree $HOME/src
            tree $HOME/work
            
       - name: setup python
