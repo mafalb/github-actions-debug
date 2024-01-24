@@ -16,12 +16,29 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      
+
+      - name: debug environment
+        run: |
+           pwd
+           echo $HOME
+           whoami
+           ls -lRh
+           
       - name: checkout collection ansible
         uses: actions/checkout@v4
         with:
           path: src
-          
+
+      - name: checkout collection ansible
+        uses: actions/checkout@v4
+           
+      - name: debug environment 2
+        run: |
+           pwd
+           echo $HOME
+           whoami
+           ls -lRh
+           
       - name: setup python
         uses: actions/setup-python@v5
         with:
