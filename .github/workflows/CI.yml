@@ -22,7 +22,7 @@ jobs:
            pwd
            echo $HOME
            whoami
-           tree $HOME
+           tree $HOME/work
            
       - name: checkout collection ansible
         uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
            pwd
            echo $HOME
            whoami
-           tree $HOME
+           tree $HOME/work
            
       - name: setup python
         uses: actions/setup-python@v5
