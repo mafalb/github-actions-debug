@@ -51,7 +51,7 @@ jobs:
         run: |
           podman --version
           tree /etc/apparmor.d
-          tree /run/containers/cni
+          sudo tree /run/containers/cni
           tree /usr/libexec/cni
           
       - name: /etc/docker
