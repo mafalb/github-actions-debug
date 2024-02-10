@@ -55,7 +55,7 @@ jobs:
           podman --version
           tree /etc/apparmor.d
           #sudo tree /run/containers/cni
-          tree /usr/libexec/cni
+          sudo tree /usr/libexec/cni
           
       - name: /etc/docker
         run: ls -l /etc/docker
