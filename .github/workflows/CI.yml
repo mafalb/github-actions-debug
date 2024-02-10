@@ -48,8 +48,12 @@ jobs:
         run: docker images
         
       - name: check if podman is available
-        run: podman --version
-        
+        run: |
+          podman --version
+          tree /etc/apparmor.d
+          tree /run/containers/cni
+          tree /usr/libexec/cni
+          
       - name: /etc/docker
         run: ls -l /etc/docker
 
