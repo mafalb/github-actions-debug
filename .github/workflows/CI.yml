@@ -53,9 +53,6 @@ jobs:
       - name: check if podman is available
         run: |
           podman --version
-          tree /etc/apparmor.d
-          #sudo tree /run/containers/cni
-          sudo tree /usr/libexec/cni
           
       - name: /etc/docker
         run: ls -l /etc/docker
@@ -63,6 +60,9 @@ jobs:
       - name: get kernel config
         run: cat /boot/config-$(uname -r)
 
+      - name: Get kernel arguments of running kernel
+        run: cat /proc/cmdline
+        
       - name: get mounted filesystems
         run: df -h
 
