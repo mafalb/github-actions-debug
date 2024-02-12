@@ -49,7 +49,7 @@ jobs:
 
       - name: python script
         run: |
-          set -x
+          pip install yaml
           which python3
           python3 -c "import yaml"
           
