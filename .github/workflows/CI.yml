@@ -10,14 +10,17 @@ on:
   workflow_dispatch:
 
 jobs:
-
   crun:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout collection ansible
-        uses: actions/checkout@v4
       - name: Build Container Image
-        run: podman build --tag ghtest crun
+        run: |
+          cat - >Containerfile <<EOF
+          FROM ubuntu:22.04
+          RUN apt-get update && apt-get install -y systemd
+          CMD ["/lib/systemd/systemd"]
+          EOF
+          podman build --tag ghtest .
       - name: Run Container
         run: podman run --systemd always -d ghtest
           
